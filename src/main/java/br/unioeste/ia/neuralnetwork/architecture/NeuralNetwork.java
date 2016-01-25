@@ -32,4 +32,11 @@ public class NeuralNetwork<N extends Neuron> {
 			current = this.layers.get(i).feed(current);
 		return current;
 	}
+
+	@Override
+	public String toString() {
+		return "{\"inputSize\":" + inputSize + ", \"layers\":" + layers + "}";
+	}
+
+	
 }

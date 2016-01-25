@@ -1,5 +1,7 @@
 package br.unioeste.ia.neuralnetwork.architecture;
 
+import java.util.Arrays;
+
 public class Tuple {
 	private final double input[];
 	private final double target[];
@@ -15,5 +17,13 @@ public class Tuple {
 	
 	public double[] getTarget() {
 		return this.target;
+	}
+
+	@Override
+	public String toString() {
+		return "{" +
+				"\"input\": " + Arrays.toString(input) + ", " +
+				"\"target\": " + Arrays.toString(target) +
+				"}";
 	}
 }

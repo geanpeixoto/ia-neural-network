@@ -13,14 +13,18 @@ public abstract class Tester {
 		this.network = network;
 	}
 
-	public double test(Tuple[] data) {
+	public ResultSet test(Tuple[] data) {
+		ResultSet set = new ResultSet();
+		
+		for (Tuple tuple : data) {
+			double[] output = this.network.feed(tuple.getInput());
+			Result r = new Result()
+					.setOutput(output)
+					.setTuple(tuple)
+					.setSuccess(this.accept(tuple.getTarget(), output));
+			set.add(r);
+		}
 
-		int hit = 0;
-
-		for (Tuple tuple : data)
-			if (this.accept(tuple.getTarget(), this.network.feed(tuple.getInput())))
-				hit++;
-
-		return hit/data.length;
+		return set;
 	}
 }

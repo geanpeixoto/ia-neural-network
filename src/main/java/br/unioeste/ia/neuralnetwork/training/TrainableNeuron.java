@@ -1,5 +1,6 @@
 package br.unioeste.ia.neuralnetwork.training;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import br.unioeste.ia.neuralnetwork.architecture.Neuron;
@@ -62,4 +63,11 @@ public class TrainableNeuron implements Neuron {
 			this.lastChanges[i] = 0;
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "{\"connections\":" + Arrays.toString(connections) +"}";
+	}
+	
+	
 }

@@ -121,4 +121,15 @@ public class BackpropagationTrainer implements Trainer {
 		return this;
 	}
 
+	@Override
+	public String toString() {
+		return "{" +
+				"\"learningRate\": " + learningRate + ", " +
+				"\"momentum\": " + momentum + ", " + 
+				"\"error\": " + errorThresh + ", " +
+				"\"maxIterations\": " + maxIterations +
+				"}";
+	}
+
+	
 }

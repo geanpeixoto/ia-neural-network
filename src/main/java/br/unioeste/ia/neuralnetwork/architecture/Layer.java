@@ -1,5 +1,7 @@
 package br.unioeste.ia.neuralnetwork.architecture;
 
+import java.util.Arrays;
+
 public class Layer< N extends Neuron > {
 
 	private final N neurons[];
@@ -27,5 +29,11 @@ public class Layer< N extends Neuron > {
 	public N[] getNeurons() {
 		return neurons;
 	}
+
+	@Override
+	public String toString() {
+		return "{\"inputSize\":" + inputSize + ", \"neurons\":" + Arrays.toString(neurons) + "}";
+	}
+	
 	
 }

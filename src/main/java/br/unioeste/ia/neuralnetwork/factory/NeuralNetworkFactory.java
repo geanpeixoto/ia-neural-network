@@ -2,7 +2,6 @@ package br.unioeste.ia.neuralnetwork.factory;
 
 import br.unioeste.ia.neuralnetwork.architecture.Layer;
 import br.unioeste.ia.neuralnetwork.architecture.activation.DerivableActivation;
-import br.unioeste.ia.neuralnetwork.architecture.activation.LogisticActivation;
 import br.unioeste.ia.neuralnetwork.training.TrainableNeuron;
 import br.unioeste.ia.neuralnetwork.training.TreinableNeuralNetwork;
 
